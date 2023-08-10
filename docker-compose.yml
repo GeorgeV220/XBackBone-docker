@@ -3,8 +3,6 @@ services:
   app:
     build: ./src
     restart: always
-    env_file:
-     - .env
     ports:
       - '8083:80'
     expose:
@@ -22,8 +20,6 @@ services:
   db:
     image: mariadb:10.4
     restart: always
-    env_file:
-      - .env
     volumes:
       - xbb_mariadb:/var/lib/mysql
     networks:
