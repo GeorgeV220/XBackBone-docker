@@ -3,7 +3,6 @@ MAINTAINER Pietro Marangon <pietro@marangon.me>
 
 ARG XBACKBONE_VERSION=3.6.3
 ENV APP_NAME=XBackBone
-ENV URL=http:\/\/127.0.0.1
 
 ADD ./nginx.conf /opt/docker/etc/nginx/vhost.common.d/11-xbackbone.conf
 ADD ./configure.sh /opt/docker/provision/entrypoint.d/01-app.sh
