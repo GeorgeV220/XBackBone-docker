@@ -6,9 +6,9 @@ services:
     env_file:
      - ./xbb.env
     ports:
-      - '80:80'
+      - '8083:80'
     expose:
-      - '80'
+      - '8083'
     networks:
       - frontend
       - backend
@@ -24,8 +24,6 @@ services:
     restart: always
     env_file:
       - ./xbb.env
-    ports:
-      - '3306'
     volumes:
       - xbb_mariadb:/var/lib/mysql
     networks:
