@@ -10,6 +10,16 @@ services:
     networks:
       - frontend
       - backend
+    environment:
+      - APP_NAME=${APP_NAME}
+      - URL=${URL}
+      - PHP_UPLOAD_MAX_FILESIZE=${PHP_UPLOAD_MAX_FILESIZE}
+      - DB_TYPE=${DB_TYPE}
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     depends_on:
       - "db"
     volumes:
@@ -24,6 +34,16 @@ services:
       - xbb_mariadb:/var/lib/mysql
     networks:
       - backend
+    environment:
+      - APP_NAME=${APP_NAME}
+      - URL=${URL}
+      - PHP_UPLOAD_MAX_FILESIZE=${PHP_UPLOAD_MAX_FILESIZE}
+      - DB_TYPE=${DB_TYPE}
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
 
 networks:
   frontend:
