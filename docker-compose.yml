@@ -8,6 +8,7 @@ services:
     expose:
       - '8083'
     networks:
+      - default
       - frontend
       - backend
     environment:
@@ -48,6 +49,9 @@ services:
 networks:
   frontend:
   backend:
+  default:
+    external: true
+    name: nginx-network
 
 volumes:
   xbb_mariadb:
