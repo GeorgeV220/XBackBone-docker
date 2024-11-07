@@ -8,9 +8,9 @@ services:
     expose:
       - '8083'
     networks:
-      - default
       - frontend
       - backend
+      - default
     environment:
       - APP_NAME=${APP_NAME}
       - URL=${URL}
