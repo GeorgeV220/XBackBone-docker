@@ -1,7 +1,7 @@
 FROM webdevops/php-nginx:8.0-alpine
 MAINTAINER Pietro Marangon <pietro@marangon.me>
 
-ARG XBACKBONE_VERSION=3.6.3
+ARG XBACKBONE_VERSION=3.8.1
 ENV APP_NAME=XBackBone
 
 ADD ./nginx.conf /opt/docker/etc/nginx/vhost.common.d/11-xbackbone.conf
