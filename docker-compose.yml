@@ -10,7 +10,6 @@ services:
     networks:
       - frontend
       - backend
-      - default
     environment:
       - APP_NAME=${APP_NAME}
       - URL=${URL}
@@ -49,9 +48,6 @@ services:
 networks:
   frontend:
   backend:
-  default:
-    external: true
-    name: nginx-network
 
 volumes:
   xbb_mariadb:
